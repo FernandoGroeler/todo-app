@@ -18,7 +18,7 @@ const navigation = createStackNavigator ({
     title: 'TODO App',
     headerTintColor: '#fff',
     headerStyle: {
-      backgroundColor: '#65499c'
+      backgroundColor: 'rgb(47, 47, 41)'
     },
     headerTitleStyle: {
       color: '#fff'

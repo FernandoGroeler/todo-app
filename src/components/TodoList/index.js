@@ -20,8 +20,12 @@ class TodoList extends Component {
           renderItem={ ({ item }) => (
             <View style={ stylesTodoList.listContainer }>
               <Text style={ stylesTodoList.listItem }>{ item }</Text>
-              <Button title='remove' onPress={ () => this.props.onRemove(item)} />
-              <Button title='edit' onPress={ () => this.props.onEdit(item)} />
+              <View style={ stylesTodoList.button }>
+                <Button color='#E24534' title='remove' onPress={ () => this.props.onRemove(item)} />
+              </View>
+              <View style={ stylesTodoList.button }>
+                <Button color='#4170A9' title='edit' onPress={ () => this.props.onEdit(item)} />
+              </View>
             </View>
           )}
         />
@@ -36,10 +40,16 @@ const stylesTodoList = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     margin: 1,
-    backgroundColor: 'rgba(225,225,225,0.2)'
+    backgroundColor: 'rgba(225,225,225,0.2)',
+    display: 'flex',
+    flexDirection: 'row'
   },
   listItem: {
-    color: '#fff'
+    color: '#fff',
+    flex: 1
+  },
+  button: {
+    marginRight: 5
   }
 })
 
